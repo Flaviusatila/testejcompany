@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+
+	<description>teste_flavius_ear</description>
+	<display-name>teste_flavius_ear</display-name>
+	<module>
+		<java>jcompany_modelo-5.5.6.jar</java>
+	</module>
+	<module>
+		<ejb>teste_flavius_modelo.jar</ejb>
+	</module>
+	<module>
+		<java>jcompany_comuns-5.5.6.jar</java>
+	</module>
+	<module>
+		<java>teste_flavius_comuns.jar</java>
+	</module>
+	<module>
+		<web>
+			<web-uri>teste_flavius.war</web-uri>
+			<context-root>teste_flavius</context-root>
+		</web>
+	</module>
+</application>

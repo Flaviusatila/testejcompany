@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"><hibernate-configuration>
+   
+    <session-factory>
+        <!-- properties -->
+        <property name="show_sql">true</property>
+        <property name="jdbc.use_streams_for_binary">true</property>
+        <property name="query.substitutions">true 1, false 0, yes 'S', no 'N'</property>
+        <property name="connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>     
+        <property name="connection.url">jdbc:derby://localhost:1527/bancolocal;create=true</property>          
+        <property name="connection.username">APP</property>        
+        <property name="connection.password">APP</property>  
+        <property name="connection.pool_size">1</property>  
+        <property name="connection.datasource">java:comp/env/jdbc/teste_flavius</property>      
+        <property name="connection.provider_class">com.powerlogic.jcompany.persistencia.hibernate.PlcConnectionProvider</property>     
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>   
+        <property name="current_session_context_class">thread</property>               
+        <property name="statement_cache.size">0</property> 
+        <property name="jdbc.batch_size">0</property>
+        <property name="connection.charSet">utf-8</property>
+        <!--  jCompany 2.0 Impede recuperação em mais de 2 níveis de profundidade -->
+        <property name="hibernate.max_fetch_depth">2</property>
+        <property name="use_outer_join">true</property>
+        <property name="dialect">org.hibernate.dialect.DerbyDialect</property>
+     	<property name="format_sql">true</property>
+
+     	<!-- otimizações jCompany -->		
+		<property name="plc.manyToOneLazyOtimiza">S</property>
+     	<property name="plc.updateOtimiza">S</property>
+    	<property name="plc.autoDetectDialect">S</property>
+     	<property name="plc.auditoriaRigida">S</property>
+		
+		<mapping class="com.flavius.app.entidade.UfEntity"/>
+		<mapping class="com.flavius.app.entidade.CidadeEntity"/>
+	</session-factory>
+
+</hibernate-configuration>

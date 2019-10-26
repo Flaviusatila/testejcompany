@@ -1,0 +1,7 @@
+2019-10-26 21:23:44.920 GMT : Apache Derby Servidor de Rede - 10.5.1.1 - (764942) iniciado e pronto para aceitar conexões na porta 1527 em {3}
+----------------------------------------------------------------
+2019-10-26 21:24:01.503 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.1.1 - (764942): instance a816c00e-016e-09f4-219a-00000000002e
+on database directory C:\powerlogic\jcompany55\meus_projetos\teste_flavius\bancolocal  
+
+Database Class Loader started - derby.database.classpath=''

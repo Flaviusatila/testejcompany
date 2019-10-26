@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>powerlogic.jcompany</groupId>
+		<artifactId>projeto-plc</artifactId>
+		<version>5.5.6</version>
+	</parent>
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>powerlogic.app</groupId>
+	<artifactId>projeto-teste_flavius_ear</artifactId>
+	<version>1.0</version>
+	<name>projeto-teste_flavius_ear</name>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>../teste_flavius</module>
+		<module>../teste_flavius_comuns</module>
+		<module>../teste_flavius_modelo</module>
+		<module>../teste_flavius_ear</module>
+	</modules>
+
+	<dependencyManagement>
+		
+	</dependencyManagement>
+
+
+	<dependencies>
+	</dependencies>
+</project> 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:plcf="http://www.powerlogic.com.br/plcf">
+		<head>
+			<link rel="StyleSheet" href="http://localhost:8080/rhdemofcls/plc/css-w2/plc.geral.css" type="text/css" charset="UTF-8"/>
+			<link rel="StyleSheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css" type="text/css" charset="UTF-8"/>
+			<link rel="StyleSheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/black-tie/jquery-ui.css" type="text/css" charset="UTF-8"/>
+		</head>
+		<body>
+			<ui:composition>
+				<ul>
+					<li>
+						<a>
+							<span class="ico iLeiautepadrao"/>
+							<label jsfc="plcf:titulo" tituloChave="app.m.inicial">Principal</label>
+						</a>
+						<ul class="ui-state-hover">
+							<li>
+								<a href="#{request.contextPath}/f/n/uftab">
+									<label jsfc="plcf:titulo" tituloChave="menu.uf.titulo">Estado</label>
+								</a>
+							</li>
+							<li>
+								<a href="#{request.contextPath}/f/n/cidadetab">
+									<label jsfc="plcf:titulo" tituloChave="menu.cidade.titulo">Cidade</label>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<ui:include src="/WEB-INF/fcls/geralMenuAjuda.xhtml"/>
+					<ui:include src="/WEB-INF/fcls/geralMenuPrefLang.xhtml"/>
+					<ui:include src="/WEB-INF/fcls/geralMenuAreaTecnica.xhtml"/>
+					<ui:include src="/WEB-INF/fcls/geralMenuThemeSwitcher.xhtml"/>
+				</ul>
+			</ui:composition>
+		</body>
+	</html>

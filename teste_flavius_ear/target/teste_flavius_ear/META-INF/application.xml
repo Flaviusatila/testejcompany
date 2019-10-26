@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application PUBLIC
+	"-//Sun Microsystems, Inc.//DTD J2EE Application 1.3//EN"
+	"http://java.sun.com/dtd/application_1_3.dtd">
+<application>
+  <display-name>teste_flavius_ear</display-name>
+  <description></description>
+  <module>
+    <ejb>classes</ejb>
+  </module>
+  <module>
+    <ejb>classes</ejb>
+  </module>
+  <module>
+    <web>
+      <web-uri>classes</web-uri>
+      <context-root>/teste_flavius</context-root>
+    </web>
+  </module>
+</application>

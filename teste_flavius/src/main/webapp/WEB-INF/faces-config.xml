@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+ <application>
+  <default-render-kit-id>com.powerlogic.jsf.renderkit</default-render-kit-id>
+  <navigation-handler>com.powerlogic.jcompany.controle.jsf.navigation.PlcNavigationManager</navigation-handler>
+  <view-handler>com.powerlogic.jcompany.controle.jsf.viewhandler.PlcFaceletsViewHandler</view-handler>
+ </application>
+
+ <navigation-rule>
+ 	<from-view-id>/*</from-view-id>
+ 	<navigation-case>
+ 		<from-outcome>logout</from-outcome>
+ 		<to-view-id>/fcls/public/loginDesconectaPlc.xhtml</to-view-id>
+ 	</navigation-case>
+ </navigation-rule>
+ 	<navigation-rule> 
+	<display-name>Manutencao Estado</display-name>  
+	<from-view-id>/n/uftab</from-view-id>  
+	<navigation-case> 
+		<from-outcome>mesmaPagina</from-outcome>  
+		<to-view-id>/n/uftab</to-view-id> 
+	</navigation-case> 
+</navigation-rule>
+	<navigation-rule> 
+	<display-name>Manutencao Cidade</display-name>  
+	<from-view-id>/n/cidadetab</from-view-id>  
+	<navigation-case> 
+		<from-outcome>mesmaPagina</from-outcome>  
+		<to-view-id>/n/cidadetab</to-view-id> 
+	</navigation-case> 
+</navigation-rule>
+	<lifecycle>
+		<phase-listener>com.flavius.app.controle.listener.AppPhaseListener</phase-listener>
+	</lifecycle>
+ 
+</faces-config>

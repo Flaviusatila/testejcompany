@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<Context displayName="teste_flavius" 
+         docBase="teste_flavius" 
+         path="teste_flavius" 
+         privileged="true" swallowOutput="off">
+
+ <Resource name="jdbc/teste_flavius" type="javax.sql.DataSource" driverClassName="org.apache.derby.jdbc.ClientDriver" 
+   url="jdbc:derby://localhost:1527/bancolocal;create=true" username="APP" password="APP"
+   maxActive="50" maxWait="-1" maxIdle="10" removeAbandoned="true" logAbandoned="true" />
+
+ <!--  Java CDI -->
+ <Resource name="BeanManager"
+           auth="Container"
+           type="javax.enterprise.inject.spi.BeanManager"
+           factory="org.jboss.weld.resources.ManagerObjectFactory"/>
+           
+<!-- JBOSS 
+
+<datasources>
+      
+   <local-tx-datasource>
+      <jndi-name>teste_flavius</jndi-name>
+      <connection-url>jdbc:derby://localhost:1527/bancolocal;create=true</connection-url>
+      <driver-class>org.apache.derby.jdbc.ClientDriver</driver-class>
+      <user-name>APP</user-name>
+      <password>APP</password>
+   </local-tx-datasource>
+
+ </datasources>
+
+-->
+
+</Context>
+
